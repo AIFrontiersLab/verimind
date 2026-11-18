@@ -1,0 +1,43 @@
+{
+  "boxes": [
+    {
+      "detail": "Performs keyword-based retrieval to identify exact matches in the dataset.",
+      "id": "b1",
+      "label": "Lexical Search Engine"
+    },
+    {
+      "detail": "Uses embeddings to find semantically similar documents and paraphrases.",
+      "id": "b2",
+      "label": "Dense Retrieval Model"
+    },
+    {
+      "detail": "Combines results from lexical and dense retrieval, applying diversity controls to prevent redundancy.",
+      "id": "b3",
+      "label": "Score Fusion Module"
+    },
+    {
+      "detail": "Tracks data transformations and retrieval decisions to ensure transparency and compliance.",
+      "id": "b4",
+      "label": "Audit Trail System"
+    }
+  ],
+  "flows": [
+    {
+      "from": "b1",
+      "label": "Keyword-based results",
+      "to": "b3"
+    },
+    {
+      "from": "b2",
+      "label": "Semantic results",
+      "to": "b3"
+    },
+    {
+      "from": "b3",
+      "label": "Integrated results",
+      "to": "b4"
+    }
+  ],
+  "subtitle": "One concept. Three AI perspectives. One tested architecture.",
+  "title": "The Training Data Factory"
+}

@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: the-training-data-factory-ingress
+  namespace: the-training-data-factory
+spec:
+  podSelector:
+    matchLabels: {app.kubernetes.io/name: the-training-data-factory}
+  policyTypes: [Ingress]
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels: {kubernetes.io/metadata.name: gateway}
+      ports: [{port: 8080}]

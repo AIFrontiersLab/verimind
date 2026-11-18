@@ -1,0 +1,21 @@
+flowchart LR
+  b1["Lexical Search Engine"]
+  b2["Dense Retrieval Model"]
+  b3["Score Fusion Module"]
+  b4["Audit Trail System"]
+  b1 -->|Keyword-based results| b3
+  b2 -->|Semantic results| b3
+  b3 -->|Integrated results| b4
+
+flowchart TB
+  subgraph happy [Happy path]
+    h_b1["Lexical Search Engine"]
+    h_b2["Dense Retrieval Model"]
+    h_b3["Score Fusion Module"]
+    h_b4["Audit Trail System"]
+    h_b1 --> h_b2
+    h_b2 --> h_b3
+    h_b3 --> h_b4
+  end
+  fail["Failure / abstain"]
+  h_b4 -.-> fail
